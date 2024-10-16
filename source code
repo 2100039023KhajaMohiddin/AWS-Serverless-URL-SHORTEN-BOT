@@ -8,7 +8,7 @@ def shorten_url(long_url):
         return response.read().decode()
 
 def send_telegram_message(chat_id, text):
-    BOT_TOKEN = '7258418881:AAGKNf7rcR5rsWYEn6u0sjlF25uy1-7-22Q'  # Replace with your bot token
+    BOT_TOKEN = 'YOUR_BOT_TOKEN'  # Replace with your bot token
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {"chat_id": chat_id, "text": text}
     req = urllib.request.Request(url, data=json.dumps(data).encode(), headers={'Content-Type': 'application/json'})
